@@ -6,149 +6,149 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Te amo kami!</title>
     <style>
-    @import url('https://fonts.googleapis.com/css2?family=Coming+Soon&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Coming+Soon&display=swap');
 
-    body {
-    font-family: "Coming Soon", cursive;
-    text-align: center;
-    margin: 0;
-    padding: 20px;
-    background-color: #ffe6f2;
-    color: #ff66b2;
-    overflow-x: hidden;
-    overflow-y: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    }
+        body {
+            font-family: "Coming Soon", cursive;
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+            background-color: #ffe6f2;
+            color: #ff66b2;
+            overflow-x: hidden;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
 
-    h1 {
-    font-size: 1.8em;
-    margin-bottom: 20px;
-    }
+        h1 {
+            font-size: 1.8em;
+            margin-bottom: 20px;
+        }
 
-    #message,
-    #birthdayMessage,
-    #secretMessage,
-    #passwordChallenge {
-    display: none;
-    margin-top: 20px;
-    font-size: 1.1em;
-    color: #ff1493;
-    opacity: 0;
-    transition: opacity 0.5s ease-in-out;
-    }
+        #message,
+        #birthdayMessage,
+        #secretMessage,
+        #passwordChallenge {
+            display: none;
+            margin-top: 20px;
+            font-size: 1.1em;
+            color: #ff1493;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+        }
 
-    #error {
-    color: #ff4d4d;
-    margin-top: 10px;
-    }
+        #error {
+            color: #ff4d4d;
+            margin-top: 10px;
+        }
 
-    input {
-    padding: 10px;
-    font-size: 1em;
-    border: 3px solid #ff99cc;
-    border-radius: 15px;
-    outline: none;
-    background-color: #fff0f5;
-    width: 80%;
-    max-width: 300px;
-    }
+        input {
+            padding: 10px;
+            font-size: 1em;
+            border: 3px solid #ff99cc;
+            border-radius: 15px;
+            outline: none;
+            background-color: #fff0f5;
+            width: 80%;
+            max-width: 300px;
+        }
 
-    button {
-    padding: 10px 20px;
-    font-size: 1em;
-    background-color: #ff99cc;
-    border: none;
-    border-radius: 15px;
-    color: white;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    margin-top: 10px;
-    }
+        button {
+            padding: 10px 20px;
+            font-size: 1em;
+            background-color: #ff99cc;
+            border: none;
+            border-radius: 15px;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin-top: 10px;
+        }
 
-    button:hover {
-    background-color: #ff66b2;
-    }
+        button:hover {
+            background-color: #ff66b2;
+        }
 
-    .kawaii-box {
-    background-color: #fff0f5;
-    border: 3px solid #ff99cc;
-    border-radius: 20px;
-    padding: 20px;
-    margin: 20px auto;
-    width: 90%;
-    max-width: 600px;
-    box-shadow: 0 0 10px rgba(255, 153, 204, 0.5);
-    }
+        .kawaii-box {
+            background-color: #fff0f5;
+            border: 3px solid #ff99cc;
+            border-radius: 20px;
+            padding: 20px;
+            margin: 20px auto;
+            width: 90%;
+            max-width: 600px;
+            box-shadow: 0 0 10px rgba(255, 153, 204, 0.5);
+        }
 
-    .password-hint {
-    font-size: 0.9em;
-    margin-bottom: 10px;
-    color: #ff66b2;
-    }
+        .password-hint {
+            font-size: 0.9em;
+            margin-bottom: 10px;
+            color: #ff66b2;
+        }
 
-    .confetti {
-    position: fixed;
-    width: 10px;
-    height: 10px;
-    background-color: #f0f;
-    animation: fall 5s linear infinite;
-    z-index: -1;
-    opacity: 0;
-    transition: opacity 0.5s ease-in-out;
-    }
+        .confetti {
+            position: fixed;
+            width: 10px;
+            height: 10px;
+            background-color: #f0f;
+            animation: fall 5s linear infinite;
+            z-index: -1;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+        }
 
-    @keyframes fall {
-    from {
-    transform: translateY(-100vh) rotate(0deg);
-    }
+        @keyframes fall {
+            from {
+                transform: translateY(-100vh) rotate(0deg);
+            }
 
-    to {
-    transform: translateY(100vh) rotate(720deg);
-    }
-    }
+            to {
+                transform: translateY(100vh) rotate(720deg);
+            }
+        }
 
-    #birthdayMessage {
-    opacity: 0;
-    transition: opacity 1s ease-in-out;
-    }
+        #birthdayMessage {
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
 
-    #secretMessage p {
-    font-family: 'Arial', sans-serif;
-    text-align: left;
-    line-height: 1.8;
-    white-space: pre-wrap;
-    word-wrap: break-word;
-    color: #333;
-    font-size: 1.1em;
-    letter-spacing: 0.5px;
-    padding: 20px;
-    background-color: #ffffff;
-    border-radius: 15px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    }
+        #secretMessage p {
+            font-family: 'Arial', sans-serif;
+            text-align: left;
+            line-height: 1.8;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            color: #333;
+            font-size: 1.1em;
+            letter-spacing: 0.5px;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 15px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
 
-    @media (max-width: 390px) {
-    body {
-    padding: 10px;
-    }
+        @media (max-width: 390px) {
+            body {
+                padding: 10px;
+            }
 
-    h1 {
-    font-size: 1.5em;
-    }
+            h1 {
+                font-size: 1.5em;
+            }
 
-    input,
-    button {
-    font-size: 0.9em;
-    }
+            input,
+            button {
+                font-size: 0.9em;
+            }
 
-    .kawaii-box {
-    padding: 15px;
-    }
-    }
+            .kawaii-box {
+                padding: 15px;
+            }
+        }
     </style>
 </head>
 
@@ -175,39 +175,9 @@
     <div id="secretMessage">
         <div class="kawaii-box">
             <h1>bitbit</h1>
-            <p>eu facilmente poderia dividir a minha vida em o "o antes e o depois de kamilly kazuha" e nem precisaria
-                explicar pra ninguem porque ja eh muito claro, eh tao visível as mudanças que voce fez em cada cantinho
-                meu que nem precisa de esforço pra ver :) acho todo mundo sabe. depois que você apareceu eu comecei a
-                ver tudo que me lembrasse minimamente de voce e ficar feliz automaticamente porque eh como se eu tivesse
-                te vendo feliz tambem. depois que você apareceu eu comecei a gostar de passar horas ouvindo voce falar
-                no discord, ou no rave vendo qualquer coisa ou falando besteira no wpp, ate porque ficar sem rir com
-                voce por muito tempo nunca eh uma opcao.depois que voce apareceu eu queria parar de ter sono so pra
-                continuar ouvindo tudo que voce tem pra compartilhar comigo (com a gente 😸) e, ao mesmo tempo, querer
-                dormir logo so pra acordar e ter mais um dia com voce.
-                eu amo e agradeço todos os pontinhos que te trouxeram ate aqui, ate esse mundo exatamente no tempo certo
-                pra que a gente pudesse se encontrar. e te encontrar meio que fez com que eu me encontrasse tambem :D me
-                vejo, me inspiro e me admiro em voce quero continuar me vendo, me encontrando e descobrindo caminhos da
-                vida com voce do meu lado pra rir de todos eles, porque tudo eh muito mais legal assim. te assisto
-                crescer (ou voce me assiste fazendo isso) fazem mais ou menos um ano e uns meses e nao vejo a hora de
-                isso se tornar o numero mas alto que eu possa imaginar 🤙🏻 porque eu nunca vou me cansar de te ver
-                crescendo e se tornando quem voce eh :) eu te amo. eu amo tudo que faz voce ser voce. feliz dia do bolo
-                mimi ❤</p>
+            <p>eu facilmente poderia dividir a minha vida em o "o antes e o depois de kamilly kazuha" e nem precisaria explicar pra ninguem porque ja eh muito claro, eh tao visível as mudanças que voce fez em cada cantinho meu que nem precisa de esforço pra ver :) acho todo mundo sabe. depois que você apareceu eu comecei a ver tudo que me lembrasse minimamente de voce e ficar feliz automaticamente porque eh como se eu tivesse te vendo feliz tambem. depois que você apareceu eu comecei a gostar de passar horas ouvindo voce falar no discord, ou no rave vendo qualquer coisa ou falando besteira no wpp, ate porque ficar sem rir com voce por muito tempo nunca eh uma opcao.depois que voce apareceu eu queria parar de ter sono so pra continuar ouvindo tudo que voce tem pra compartilhar comigo (com a gente 😸) e, ao mesmo tempo, querer dormir logo so pra acordar e ter mais um dia com voce. eu amo e agradeço todos os pontinhos que te trouxeram ate aqui, ate esse mundo exatamente no tempo certo pra que a gente pudesse se encontrar. e te encontrar meio que fez com que eu me encontrasse tambem :D me vejo, me inspiro e me admiro em voce quero continuar me vendo, me encontrando e descobrindo caminhos da vida com voce do meu lado pra rir de todos eles, porque tudo eh muito mais legal assim. te assisto crescer (ou voce me assiste fazendo isso) fazem mais ou menos um ano e uns meses e nao vejo a hora de isso se tornar o numero mas alto que eu possa imaginar 🤙🏻 porque eu nunca vou me cansar de te ver crescendo e se tornando quem voce eh :) eu te amo. eu amo tudo que faz voce ser voce. feliz dia do bolo mimi ❤</p>
             <h1>nana</h1>
-            <p>KAMISSSSS primeiramente feliz aniversário espero que esteja tudo bem e que voce aproveite muito o seu dia
-                com as pessoas que você gosta!! eu nao sei bem como começar esse texto mas acho que do começo ne 🤓 as
-                vezes acho que eu não consigo expressar bem o quanto você é importante pra mim e pode parecer que eu nao
-                me sinta tao próxima assim de você, mas na realidade acho que eu nunca me senti tao confortável com
-                alguém como eu me sinto com você (vocês, t amo familia diva 🦶🏻). esses dias tava pensando em como eu
-                sinto que eu posso contar literalmente qualquer coisa pra vocês sem ter alguem julgando, e inclusive eu
-                literalmente sinto como se voce fosse parte da minha família mesmo, sempre quero mostrar as coisas que
-                acontecem cmg pra vocês.
-                acho que eu nunca falei isso, mas eu te vejo como um exemplo de verdade, na forma como você é esforçada,
-                em como você sempre se importa com todo mundo e tenta resolver as coisas da melhor forma possivel, em
-                tudo. acho que se um dia eu puder ser pelo menos um pouquinho do que voce é eu vou ser mto mto feliz.
-                obrigada por tudo kamis, espero que você consiga sentir pelo menos um pouquinho do quanto eu te amo
-                (muito muito muito muito mil vezes muito) e do quanto você é importante pra gente, espero que você tenha
-                gostado da surpresa e que você tenha o melhor aniversário possivel pq vc merece mto mto. te amo kamis, e
-                feliz aniversário de novo 💓🤓😎 <-- eu e vc.</p>
+            <p>KAMISSSSS primeiramente feliz aniversário espero que esteja tudo bem e que voce aproveite muito o seu dia com as pessoas que você gosta!! eu nao sei bem como começar esse texto mas acho que do começo ne 🤓 as vezes acho que eu não consigo expressar bem o quanto você é importante pra mim e pode parecer que eu nao me sinta tao próxima assim de você, mas na realidade acho que eu nunca me senti tao confortável com alguém como eu me sinto com você (vocês, t amo familia diva 🦶🏻). esses dias tava pensando em como eu sinto que eu posso contar literalmente qualquer coisa pra vocês sem ter alguem julgando, e inclusive eu literalmente sinto como se voce fosse parte da minha família mesmo, sempre quero mostrar as coisas que acontecem cmg pra vocês. acho que eu nunca falei isso, mas eu te vejo como um exemplo de verdade, na forma como você é esforçada, em como você sempre se importa com todo mundo e tenta resolver as coisas da melhor forma possivel, em tudo. acho que se um dia eu puder ser pelo menos um pouquinho do que voce é eu vou ser mto mto feliz. obrigada por tudo kamis, espero que você consiga sentir pelo menos um pouquinho do quanto eu te amo (muito muito muito muito mil vezes muito) e do quanto você é importante pra gente, espero que você tenha gostado da surpresa e que você tenha o melhor aniversário possivel pq vc merece mto mto. te amo kamis, e feliz aniversário de novo 💓🤓😎 <-- eu e vc.</p>
         </div>
     </div>
 
