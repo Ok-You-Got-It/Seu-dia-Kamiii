@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feliz dia do bolo S2</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            background-color: #f0f0f0;
+        }
+
+        .container {
+            flex-grow: 1;
+            max-width: 800px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .coquette-wrapper {
+            position: relative;
+            width: 80px;
+            height: 80px;
+            margin: 20px auto 30px;
+        }
+
+        .coquette {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            cursor: pointer;
+            border: none;
+            padding: 0;
+            background-color: transparent;
+        }
+
+        .coquette img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .clique-aqui {
+            position: absolute;
+            top: -25px;
+            left: 50%;
+            transform: translateX(-50%);
+            white-space: nowrap;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .clique-aqui::after {
+            content: " ➜";
+            display: inline-block;
+            transform: rotate(90deg);
+            margin-left: 5px;
+        }
+
+        .reloquite {
+            width: 100%;
+            max-width: 300px;
+            height: auto;
+            margin-top: 20px;
+            align-self: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Temos uma surpresa mas voce precisa descobrir o segredo</h1>
+        <p>Oooii kamis !! nos (bitbit e nana) preparamos um presente misterioso pra voce 👏🏻 </p>
+        <p>Mas nem tudo eh d graça então você vai ter que descobrir a senha primeiro ! <br> Espero que você goste e se
+            divirta descobrindo a senha :D</p>
+
+        <p>PS: a annys tb ajudou nois ela merece créditos.
+
+        <h3>Dica: <a href="https://imgur.com/a/m5IBpNn" target="_blank" rel="noopener noreferrer"
+                style="text-decoration: none; color:rgb(177, 90, 235)">https://imgur.com/a/m5IBpNn</a></h3>
+        O resto é com você! mas a gente promete que nao tá difícil :p é isso um beijo kamis</p>
+        <div class="coquette-wrapper">
+            <span class="clique-aqui">Clique aqui</span>
+            <button onclick="window.location.href='carta.html'" class="coquette">
+                <img src="coquette.webp" alt="Coquette">
+            </button>
+        </div>
+        <img src="pochacco.gif" alt="Reloquite" class="reloquite">
+    </div>
+</body>
+
+</html>
